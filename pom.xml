@@ -87,6 +87,22 @@
     <pluginManagement>
       <plugins>
         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.0</version> <!-- ou a versão mais recente disponível -->
+        </plugin>
+               
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.13.0</version> <!-- Garanta uma versão recente para Java 17/21 -->
+            <configuration>
+                <source>21</source> <!-- Coloque a versão do seu Java (11, 17, 21, etc.) -->
+                <target>21</target>
+            </configuration>
+        </plugin>               
+               
+        <plugin>
           <artifactId>maven-checkstyle-plugin</artifactId>
           <version>2.8</version>
         </plugin>
@@ -140,19 +156,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.11</version>
         </plugin>
-
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>findbugs-maven-plugin</artifactId>
-          <version>2.3.3</version>
-        </plugin>
-
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>taglist-maven-plugin</artifactId>
-          <version>2.4</version>
-        </plugin>
-
+        
         <plugin>
           <groupId>org.mortbay.jetty</groupId>
           <artifactId>jetty-maven-plugin</artifactId>
