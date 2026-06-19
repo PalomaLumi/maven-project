@@ -167,12 +167,20 @@
   </build>
 
   <dependencyManagement>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-tomcat</artifactId>
+    <scope>provided</scope>
+</dependency>
+           
+           
     <dependencies>
       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>servlet-api</artifactId>
         <version>2.5</version>
       </dependency>
+             
 
       <dependency>
         <groupId>javax.servlet.jsp</groupId>
